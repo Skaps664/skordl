@@ -4,7 +4,7 @@ import Topic from "./Topic.astro";
 ---
 <Container>
 <div class="relative flex flex-col items-center md:flex-row">
-    <Topic title="Contact" description="Connect with Us: Let's Discuss Your Digital Marketing Needs" />
+    <Topic title="Contact" description="Connect with Us: Let's Discuss Your Digital Needs" />
 </div>
 
 <div class="relative flex flex-col items-center md:flex-row my-6 bg-zinc-100 rounded-[45px]">
@@ -13,7 +13,7 @@ import Topic from "./Topic.astro";
             <div class="flex">
                 <div class="flex items-center me-4">
                     <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime">
-                    <label for="inline-radio" class="ms-2 text-base font-medium text-black">Say Hi</label>
+                    <label for="inline-radio" class="ms-2 text-base font-medium text-black">Inquiry</label>
                 </div>
                 <div class="flex items-center me-4 mx-8 md:mx-20">
                     <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime">
@@ -21,12 +21,12 @@ import Topic from "./Topic.astro";
                 </div>
             </div>
             <div>
-                <label for="email" class="block mb-2 text-base font-medium text-black">Name</label>
-                <input type="email" id="email" class="shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5" placeholder="Name" required>
+                <label for="subject" class="block mb-2 text-base font-medium text-black">Name</label>
+                <input type="text" id="email" class="shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5" placeholder="Name" required>
             </div>
             <div>
-                <label for="subject" class="block mb-2 text-base font-medium text-black">Email</label>
-                <input type="text" id="subject" class="block p-3 w-full text-base text-black bg-white rounded-lg border shadow-sm focus:ring-black focus:border-black" placeholder="Email" required>
+                <label for="email" class="block mb-2 text-base font-medium text-black">Email</label>
+                <input type="email" id="subject" class="block p-3 w-full text-base text-black bg-white rounded-lg border shadow-sm focus:ring-black focus:border-black" placeholder="Email" required>
             </div>
             <div class="sm:col-span-2">
                 <label for="message" class="block mb-2 text-base font-medium text-black dark:text-gray-400">Message</label>
