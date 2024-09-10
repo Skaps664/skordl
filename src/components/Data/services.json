@@ -3,19 +3,19 @@
     "id": 1,
     "name1": "Website",
     "name2": "Development",
-    "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+    "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
     "arrow": "./services/ag.svg",
     "link": "./",
     "image": "./services/01.svg"
   },
   {
     "id": 2,
-    "name1": "Website",
-    "name2": "Designing",
-    "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
-    "arrow": "./services/ag.svg",
+    "name1": "AI",
+    "name2": "Automation",
+    "background": "h-[310px] p-12 bg-black rounded-[45px] shadow-card border border-black justify-between items-center flex text-white",
+    "arrow": "./services/aw.svg",
     "link": "./",
-    "image": "./services/02.svg"
+    "image": "./services/06.svg"
   },
   {
     "id": 3,
@@ -39,18 +39,19 @@
     "id": 5,
     "name1": "Backend",
     "name2": "Services",
-    "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+    "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
     "arrow": "./services/ag.svg",
     "link": "./",
     "image": "./services/05.svg"
   },
+
   {
     "id": 6,
-    "name1": "AI",
-    "name2": "Automation",
-    "background": "h-[310px] p-12 bg-black rounded-[45px] shadow-card border border-black justify-between items-center flex text-white",
-    "arrow": "./services/aw.svg",
+    "name1": "Website",
+    "name2": "Designing",
+    "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+    "arrow": "./services/ag.svg",
     "link": "./",
-    "image": "./services/06.svg"
+    "image": "./services/02.svg"
   }
 ]

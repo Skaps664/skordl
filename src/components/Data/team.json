@@ -1,54 +1,44 @@
 {
-    "team":
-    [
-        {
-            "title": "CEO and Founder",
-            "name": "John Smith",
-            "description": "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
-            "profile": "/team/c1.png",
-            "link": "/"
-        },
-        {
-            "title": "Director of Operations",
-            "name": "Jane Doe",
-            "description": "7+ years of experience in project management and team leadership. Strong organizational and communication skills",
-            "profile": "/team/c2.png",
-            "link": "/"
-        },
-        {
-            "title": "Senior SEO Specialist",
-            "name": "Michael Brown",
-            "description": "5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization",
-            "profile": "/team/c3.png",
-            "link": "/"
-        }
+  "team": [
+    {
+      "title": "CEO and Founder",
+      "name": "Sudais Khan",
+      "description": "",
+      "profile": "/team/c1.png",
+      "link": "https://www.linkedin.com/in/sudaisk/"
+    },
+    {
+      "title": "Senior Developer",
+      "name": "Omer Jauhar",
+      "description": "",
+      "profile": "/team/c3.png",
+      "link": "https://www.linkedin.com/in/muhammad-omer-jauhar-khan-51aa671b9/"
+    },
+    {
+      "title": "Developer Relations",
+      "name": "Ammar Raza",
+      "description": "",
+      "profile": "/team/c3.png",
+      "link": "https://www.linkedin.com/in/ammar-chattha-239919230/"
+    }
+  ],
+  "process": [
+    {
+      "label": "Planning",
+      "content": "In the planning phase, we collaborate with you to understand your business goals, technical needs, and current infrastructure. This helps us create a tailored strategy to drive your success."
+    },
+    {
+      "label": "Development",
+      "content": "Our team designs and develops custom software solutions that align with your vision, ensuring scalability, security, and user-centric design."
+    },
 
-    ],
-    "process":
-    [
-        {
-            "label": "Consultation",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
-        },
-        {
-            "label": "Research",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
-        },
-        {
-            "label": "Implementation",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
-        },
-        {
-            "label": "Optimization",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
-        },
-        {
-            "label": "Reporting",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
-        },
-        {
-            "label": "Improvement",
-            "content": "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements."
-        }
-    ]
+    {
+      "label": "Testing",
+      "content": "Our rigorous testing process ensures that every feature and functionality is optimized for performance, security, and reliability across all environments."
+    },
+    {
+      "label": "Feedback and Improvement",
+      "content": "Based on performance metrics and feedback, we make ongoing improvements to keep your systems running optimally and aligned with evolving business needs."
+    }
+  ]
 }
