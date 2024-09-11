@@ -1,24 +1,24 @@
 {
   "team": [
     {
-      "title": "CEO and Founder",
+      "title": "Founder",
       "name": "Sudais Khan",
-      "description": "",
-      "profile": "/team/c1.png",
+      "description": "A dynamic leader and backend developer, infusing fun and creativity into the crafting of solutions that pushes businesses forward.",
+      "profile": "/team/1.svg",
       "link": "https://www.linkedin.com/in/sudaisk/"
     },
     {
       "title": "Senior Developer",
       "name": "Omer Jauhar",
-      "description": "",
-      "profile": "/team/c3.png",
+      "description": "Omer brings a wealth of expertise in software development, leading projects with a focus on robust and efficient, scalable solutions.",
+      "profile": "/team/3.svg",
       "link": "https://www.linkedin.com/in/muhammad-omer-jauhar-khan-51aa671b9/"
     },
     {
       "title": "Developer Relations",
       "name": "Ammar Raza",
-      "description": "",
-      "profile": "/team/c3.png",
+      "description": "excels in fostering strong relationships while engineering data-driven solutions, ensuring both innovation and seamless integration.",
+      "profile": "/team/2.svg",
       "link": "https://www.linkedin.com/in/ammar-chattha-239919230/"
     }
   ],
