@@ -13,11 +13,11 @@ import Topic from "./Topic.astro";
         <form id="contactForm" class="space-y-8 md:w-full">
             <div class="flex">
                 <div class="flex items-center me-4">
-                    <input id="inquiry" type="radio" value="inquiry" name="type" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime" checked>
+                    <input id="inquiry" type="radio" value="inquiry" name="from_type" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime" checked>
                     <label for="inquiry" class="ms-2 text-base font-medium text-black">Inquiry</label>
                 </div>
                 <div class="flex items-center me-4 mx-8 md:mx-20">
-                    <input id="quote" type="radio" value="quote" name="type" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime">
+                    <input id="quote" type="radio" value="quote" name="from_type" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime">
                     <label for="quote" class="ms-2 text-base font-medium text-black">Get a Quote</label>
                 </div>
             </div>
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const typeInput = form.querySelector('input[name="type"]:checked') as HTMLInputElement;
+        const fromTypeInput = form.querySelector('input[name="from_type"]:checked') as HTMLInputElement;
         const fromNameInput = form.querySelector('#from_name') as HTMLInputElement;
         const fromEmailInput = form.querySelector('#from_email') as HTMLInputElement;
         const messageInput = form.querySelector('#message') as HTMLTextAreaElement;
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             from_name: fromNameInput.value,
             from_email: fromEmailInput.value,
             message: messageInput.value,
-            type: typeInput?.value
+            from_type: fromTypeInput?.value
         };
 
         // Replace these parameters with your actual EmailJS service ID and template ID
