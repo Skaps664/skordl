@@ -2,6 +2,7 @@
 import Container from "./Container.astro"
 import Topic from "./Topic.astro";
 ---
+
 <Container>
 <div class="relative flex flex-col items-center md:flex-row">
     <Topic title="Contact" description="Connect with Us: Let's Discuss Your Digital Needs" />
@@ -9,28 +10,28 @@ import Topic from "./Topic.astro";
 
 <div class="relative flex flex-col items-center md:flex-row my-6 bg-zinc-100 rounded-[45px]">
     <div class="row items-center py-12 px-4 md:px-20 md:w-8/12 md:py-10">
-        <form action="#" class="space-y-8 md:w-full">
+        <form id="contactForm" class="space-y-8 md:w-full">
             <div class="flex">
                 <div class="flex items-center me-4">
-                    <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime">
-                    <label for="inline-radio" class="ms-2 text-base font-medium text-black">Inquiry</label>
+                    <input id="inquiry" type="radio" value="inquiry" name="type" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime" checked>
+                    <label for="inquiry" class="ms-2 text-base font-medium text-black">Inquiry</label>
                 </div>
                 <div class="flex items-center me-4 mx-8 md:mx-20">
-                    <input id="inline-2-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime">
-                    <label for="inline-2-radio" class="ms-2 text-base font-medium text-black">Get a Quote</label>
+                    <input id="quote" type="radio" value="quote" name="type" class="w-4 h-4 text-lime bg-black border-black focus:ring-lime">
+                    <label for="quote" class="ms-2 text-base font-medium text-black">Get a Quote</label>
                 </div>
             </div>
             <div>
-                <label for="subject" class="block mb-2 text-base font-medium text-black">Name</label>
-                <input type="text" id="email" class="shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5" placeholder="Name" required>
+                <label for="from_name" class="block mb-2 text-base font-medium text-black">Name</label>
+                <input type="text" id="from_name" name="from_name" class="shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5" placeholder="Your name" required>
             </div>
             <div>
-                <label for="email" class="block mb-2 text-base font-medium text-black">Email</label>
-                <input type="email" id="subject" class="block p-3 w-full text-base text-black bg-white rounded-lg border shadow-sm focus:ring-black focus:border-black" placeholder="Email" required>
+                <label for="from_email" class="block mb-2 text-base font-medium text-black">Email</label>
+                <input type="email" id="from_email" name="from_email" class="block p-3 w-full text-base text-black bg-white rounded-lg border shadow-sm focus:ring-black focus:border-black" placeholder="Your email" required>
             </div>
             <div class="sm:col-span-2">
                 <label for="message" class="block mb-2 text-base font-medium text-black dark:text-gray-400">Message</label>
-                <textarea id="message" rows="6" class="block p-2.5 w-full text-base text-black bg-white rounded-lg shadow-sm border focus:ring-black focus:border-black" placeholder="Message"></textarea>
+                <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-base text-black bg-white rounded-lg shadow-sm border focus:ring-black focus:border-black" placeholder="Your message"></textarea>
             </div>
             <button type="submit" class="w-full py-5 bg-zinc-900 rounded-[14px] justify-center gap-2.5 inline-flex">
                 <div class="text-center text-white text-xl font-normal leading-7">Send Message</div>
@@ -41,5 +42,63 @@ import Topic from "./Topic.astro";
         <img src="./clients/contact.svg" alt="c" width="80%">
     </div>
 </div>
-
 </Container>
+
+<script>
+import emailjs from '@emailjs/browser';
+
+type EmailJSTemplateParams = {
+    [key: string]: string | undefined;
+};
+
+// Initialize EmailJS with your public key
+emailjs.init("y5vpJbhT8-CKmMx8Y"); // Replace with your actual public key
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm') as HTMLFormElement;
+    
+    if (!form) {
+        console.error('Contact form not found');
+        return;
+    }
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const typeInput = form.querySelector('input[name="type"]:checked') as HTMLInputElement;
+        const fromNameInput = form.querySelector('#from_name') as HTMLInputElement;
+        const fromEmailInput = form.querySelector('#from_email') as HTMLInputElement;
+        const messageInput = form.querySelector('#message') as HTMLTextAreaElement;
+
+        if (!fromNameInput || !fromEmailInput || !messageInput) {
+            console.error('Required form fields not found');
+            return;
+        }
+
+        const templateParams: EmailJSTemplateParams = {
+            to_name: "SKORDL Admin", // Replace with your recipient's name
+            from_name: fromNameInput.value,
+            from_email: fromEmailInput.value,
+            message: messageInput.value,
+            type: typeInput?.value
+        };
+
+        // Replace these parameters with your actual EmailJS service ID and template ID
+        emailjs.send('service_yi81rth', 'template_qzs7gvk', templateParams)
+            .then((response) => {
+                alert('Message sent successfully!');
+                form.reset();
+                // Set inquiry radio button as checked after form reset
+                const inquiryRadio = form.querySelector('#inquiry') as HTMLInputElement;
+                if (inquiryRadio) {
+                    inquiryRadio.checked = true;
+                }
+            })
+            .catch((error) => {
+                alert('Failed to send message. Please try again.');
+                console.error('EmailJS error:', error);
+            });
+    });
+});
+</script>
